@@ -1,0 +1,31 @@
+
+<div class="row">
+  <div class="col-sm-offset-2 col-sm-8">
+    <h2>Send a Valentine Letter</h2>
+    <%= form_for Letter.new do |f| %>
+
+      <div class="form-group">
+        <label>Recipient Email</label>
+        <%= f.text_field :recipient, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <label>Poem</label>
+        <%= f.select :poem, [
+          "Roses are red violets are blue fires are so hot and so are you",
+          "Roses are red violets are blue you have made my dreams come true",
+          "Roses are red violets are blue I just can't stop thinking of you",
+        ], class: "form-control" %>
+      </div>
+
+
+      <div class="form-group">
+        <label>Message</label>
+        <%= f.text_area :message, class: "form-control" %>
+      </div>
+
+      <%= f.submit "Send", class: "btn btn-default" %>
+
+    <% end %>
+  </div>
+</div>
