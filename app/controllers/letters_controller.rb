@@ -13,7 +13,7 @@ class LettersController < ApplicationController
         message: params[:letter][:message],
       })
       letter.save
-      redirect_to letters_path, flash: {alert: "Letter has been sent"}
+      redirect_to root_url, flash: {alert: "Letter has been sent, want to send another one?"}
     end
   end
 
